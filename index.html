@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!--  <style type="text/css">@import url("css/templatemo_style.css");</style>-->
+    <link href="css/templatemo_style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/jcarousel.css" rel="stylesheet" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="prettyPhoto/css/prettyPhoto.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <!--  <link rel="stylesheet" href="css/templatemo_style.css">-->
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Pioneer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <!--   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+       <link rel="stylesheet" href="css/swipebox.css">
+    <!--   <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+       <!--webfont-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!------ Light Box ------>
+    <script src="js/jquery.swipebox.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function($) {
+            $(".swipebox").swipebox();
+        });
+    </script>
+    <!------ Eng Light Box ------>
+
+    <!--  <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet"-->
+
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+    <script>
+        function scroll(val,el,timeout,step){
+            var i=0;
+            (function(){
+                if(i<=val){
+                    setTimeout(arguments.callee,timeout);
+                    document.getElementById(el).innerHTML=i;
+                    i=i+step;
+                }else{
+                    document.getElementById(el).innerHTML=val;
+                }
+            })();
+        }
+
+        scroll(1,'shethik-cifra',1,1);
+    </script>
+    <!--  <script type="text/javascript">
+          $(window).load(function() {
+              var $container = $('.animate-grid .gallary-thumbs');
+              $container.isotope({
+                  filter: '*',
+                  animationOptions: {
+                      duration: 750,
+                      easing: 'linear',
+                      queue: false
+                  }
+              });
+              $('.animate-grid .categories a').click(function() {
+                  $('.animate-grid .categories .active').removeClass('active');
+                  $(this).addClass('active');
+                  var selector = $(this).attr('data-filter');
+                  $container.isotope({
+                      filter: selector,
+                      animationOptions: {
+                          duration: 750,
+                          easing: 'linear',
+                          queue: false
+                      }
+                  });
+                  return false;
+              });
+          });
+
+      </script>-->
+    <!-- Script for gallery Here -->
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            var filterList = {
+
+                init: function () {
+
+                    // MixItUp plugin
+                    // http://mixitup.io
+                    $('#portfoliolist').mixitup({
+                        targetSelector: '.portfolio',
+                        filterSelector: '.filter',
+                        effects: ['fade'],
+                        easing: 'snap',
+                        // call the hover effect
+                        onMixEnd: filterList.hoverEffect()
+                    });
+
+                },
+
+                hoverEffect: function () {
+
+                    // Simple parallax effect
+                    $('#portfoliolist .portfolio').hover(
+                            function () {
+                                $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                                $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
+                            },
+                            function () {
+                                $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                                $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+                            }
+                    );
+
+                }
+
+            };
+
+            // Run the show!
+            filterList.init();
+        });
+    </script>
+    <!--Конец скрипта с галереей -->
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+            });
+        });
+    </script>
+</head>
+<body <!--id="top" -->data-spy="scroll" data-target=".navbar-collapse">
+<!-- start templatemo navigation -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img id="img1" src="images/logo4.jpg" alt="logo"/></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#top" class="smoothScroll">ГЛАВНАЯ</a></li>
+                <!-- <li><a href="#features" class="smoothScroll">FEATURES</a></li>-->
+                <li><a href="#about" class="smoothScroll">О КОМПАНИИ</a></li>
+                <li><a href="#team" class="smoothScroll">ВИДЫ УСЛУГ</a></li>
+                <li><a href="#portfolio" class="smoothScroll">НАШИ РАБОТЫ</a></li>
+                <li><a href="#contact" class="smoothScroll">КОНТАКТЫ</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- end логотип и навигация -->
+<!--Верхний слайдер-->
+<section id="home" class="text-center">
+    <div class="templatemo_headerimage">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="images/slider/4.jpg" alt="Slide 1">
+                    <div class="slider-caption">
+                        <div class="templatemo_homewrapper">
+                            <!--<h1>Creative Web Design Agency</h1>-->
+                            <!--<h2>Web Design &amp; code your dream</h2>-->
+                            <a href="#portfolio" class="smoothScroll templatemo-slider-btn btn btn-default">Подробнее...</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/slider/10.jpg" alt="Slide 2">
+                    <div class="slider-caption">
+                        <div class="templatemo_homewrapper">
+                            <!--<h1>Flex Slider, CSS Flexbox</h1>-->
+                            <!--<h2>Work on all modern browsers, IE 10+</h2>-->
+                            <a href="#team" class="smoothScroll templatemo-slider-btn btn btn-default">Наши возможности</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/slider/11.jpg" alt="Slide 3">
+                    <div class="slider-caption">
+                        <div class="templatemo_homewrapper">
+                            <!--<h1>Special Thanks</h1>-->
+                            <!--<h2>unsplash.com, flexslider, bootstrap, jquery</h2>-->
+                            <a href="#about" class="smoothScroll templatemo-slider-btn btn btn-default">Кто мы</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--end Верхний слайдер-->
+<!--start блок "О нас"-->
+<section id="about" class="features text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 text-center">
+                <h2>О КОМПАНИИ</h2>
+                <p>Предприятие ООО “ВОДСПЕЦСТРОЙ-К” основано в
+                    июле 2014 г., организовано на базе КО “Водспецстрой”
+                    г. Донецк.</p>
+            </div>
+
+
+            <!--<div class="col-md-12"></div>-->
+            <div class="col-sm-6 col-md-4">
+                <div class="fa circle count">40</div>
+                <h3>Лет</h3>
+                <p>Многолетний опыт работы в сфере строительства - это устойчивый фундамент для построения новых отношений</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <i class="fa circle count">53</i>
+                <h3>Объектов</h3>
+                <p>Работа с объектами любой сложности - от проекта до сдачи в эксплуатацию</p>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+                <i class="fa circle count">150</i>
+                <h3>Единиц техники</h3>
+                <p>Собственные МТС - важный фактор в строгом соблюдении графика строительства</p>
+            </div>
+            <!--<div class="col-sm-4 col-md-4 shethik-cifra" id="shethik-cifra">0</div>-->
+            <!-- <div class="col-sm-4 col-md-4 circle count">1234</span></div>
+            <!-- <div class="col-sm-4 col-md-4 shethik-cifra" id="shethik-cifra">0</div>-->
+            <!--       <div class="col-sm-6 col-md-6 info">
+                       <h3>We are COMPOSITE</h3>
+                       <h4>WEB DESIGN &AMP; DEVELOPMENT AGENCY</h4>
+                       <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum dapibus lectus 	a ligula blandit ac egestas ipsum facilisis toque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum dapibus lectus 	a ligula blandit ac egestas ipsum facilisi.</p>
+                       <p>Suspendisse potenti. Etiam elementum laoreet mauris. Ut rutrum feugiat neque. Suspendisse viverra gravida nulla. Duis sed enim vitae metus nonummy venenatis. Curabitur semper rutrum sapien. Mauris luctus.</p>
+                   </div>
+
+
+                   <div class="col-sm-6 col-md-6 skills">
+                   <span>HTML5</span>
+                   <span class="pull-right">100%</span>
+                   <div class="progress">
+                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                   </div>
+                   <span>CSS3</span>
+                   <span class="pull-right">100%</span>
+                   <div class="progress">
+                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                   </div>
+                   <span>PHOTOSHOP</span>
+                   <span class="pull-right">80%</span>
+                   <div class="progress">
+                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                   </div>
+                   <span>JQUERY</span>
+                   <span class="pull-right">90%</span>
+                   <div class="progress">
+                       <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                   </div>
+               </div>
+   </div>-->
+        </div>
+</section>
+<!-- end блок "о нас" -->
+<!-- Начало блок "Виды услуг" -->
+<section id="team">
+    <div class="row">
+        <div class="col-md-8 text-center">
+            <h2>ВИДЫ УСЛУГ</h2>
+        </div>
+    </div>
+
+</section>
+<!-- Конец блок "Виды услуг" -->
+<section>
+    <div class="gallary animate-grid">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="categories">
+                        <ul>
+                            <li>
+                                <ol>
+                                    <li><a href="#" data-filter="*" class="active">Все объекты</a></li>
+                                    <li><a href="#" data-filter=".web">Гостинницы</a></li>
+                                    <li><a href="#" data-filter=".photography">Административные здания</a></li>
+                                    <li><a href="#" data-filter=".app">Коммерческие объекты</a></li>
+                                    <li><a href="#" data-filter=".branding">Объекты водоснабжения</a></li>
+                                    <li><a href="#" data-filter=".proizvod">Производственные объекты</a></li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gallary-thumbs">
+
+                <div class="col-sm-6 col-md-3 branding">
+                    <div class="gallary-item">
+                        <div class="hover-bg">
+                            <a href="images/portfolio/work1-1.jpg" target="_blank"><!--#">-->
+                                <div class="hover-text">
+                                    <h4>Logo Design</h4>
+                                    <small>Branding</small>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="images/portfolio/work1.jpg" class="img-responsive" alt="...">
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 photography app">
+                    <div class="gallary-item">
+                        <div class="hover-bg">
+                            <a href="#">
+                                <div class="hover-text">
+                                    <h4>Logo Design</h4>
+                                    <small>Branding</small>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="images/portfolio/work2.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 branding">
+                    <div class="gallary-item">
+                        <div class="hover-bg">
+                            <a href="#">
+                                <div class="hover-text">
+                                    <h4>Logo Design</h4>
+                                    <small>Branding</small>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="images/portfolio/work3.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 branding">
+                    <div class="gallary-item">
+                        <div class="hover-bg">
+                            <a href="#">
+                                <div class="hover-text">
+                                    <h4>Logo Design</h4>
+                                    <small>Branding</small>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="http://placehold.it/660x450/CCC/FFF" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 web">
+                    <div class="gallary-item">
+                        <div class="hover-bg">
+                            <a href="images/portfolio/R1.jpg" target="_blank"">
+                            <div class="hover-text">
+                                <h4>Logo Design</h4>
+                                <small>Branding</small>
+                                <div class="clearfix"></div>
+                                <i class="fa fa-plus"></i>
+                            </div>
+                            <img src="images/portfolio/R1.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 web">
+                    <div class="gallary-item">
+                        <div class="hover-bg">
+                            <a href="images/portfolio/R2.jpg" target="_blank"">
+                            <div class="hover-text">
+                                <h4>Logo Design</h4>
+                                <small>Branding</small>
+                                <div class="clearfix"></div>
+                                <i class="fa fa-plus"></i>
+                            </div>
+                            <img src="images/portfolio/R2.jpg" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 app">
+                    <div class="gallary-item">
+                        <div class="hover-bg">
+                            <a href="#">
+                                <div class="hover-text">
+                                    <h4>Logo Design</h4>
+                                    <small>Branding</small>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="http://placehold.it/660x450/CCC/FFF" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 photography web">
+                    <div class="gallary-item">
+                        <div class="hover-bg">
+                            <a href="#">
+                                <div class="hover-text">
+                                    <h4>Logo Design</h4>
+                                    <small>Branding</small>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="http://placehold.it/660x450/CCC/FFF" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 web">
+                    <div class="gallary-item">
+                        <div class="hover-bg">
+                            <a href="#">
+                                <div class="hover-text">
+                                    <h4>Logo Design</h4>
+                                    <small>Branding</small>
+                                    <div class="clearfix"></div>
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <img src="http://placehold.it/660x450/CCC/FFF" class="img-responsive" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Начало блок "НАШИ РАБОТЫ" -->
+<!--<section id="portfolio">
+    <div class="col-md-8 text-center">
+        <h2>НАШИ РАБОТЫ</h2>
+    </div>-->
+<!--Портфолио 1 Старт-->
+<!--<div class="main-part">
+<div class="projects-section" id="portfolio">
+    <div class="projects-section-head text-center">
+        <h3>PROJECTS</h3>
+    </div>
+    <ul id="filters" class="clearfix">
+        <li><span class="filter active" data-filter="app card icon logos web">ALL</span></li>
+        <li><span class="filter" data-filter="app">Photography</span></li>
+        <li><span class="filter" data-filter="card">Events</span></li>
+        <li><span class="filter" data-filter="icon">Design</span></li>
+        <li><span class="filter" data-filter="logos">Projects</span></li>
+    </ul>
+    <div id="portfoliolist">
+        <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-1.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-1.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-2.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-2.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-3.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-3.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+
+        </div>
+
+        <div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-4.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-4.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-5.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-5.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-6.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-6.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-7.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-7.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-8.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-8.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="portfolio logos mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-9.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-9.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-10.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-10.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-11.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-11.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
+            <div class="portfolio-wrapper grid_box">
+                <a href="images/pic-12.jpg" class="swipebox"  title="Image Title"> <img src="images/pic-12.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!--Портфолио 1 Конец -->
+<!---->
+
+
+
+
+<section id="inner-headline">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="pageTitle">Наши работы</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div><h2>   Описание графы</h2>Более подробная информация будет отображаться для каждого объекта при нажатии на фотографию (Выводится крупное фото с детельным описанием снизу</div>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="portfolio-categ filter">
+                    <li class="all active"><a href="#">Все работы</a></li>
+                    <li class="web"><a href="#" title="">Административные здания</a></li>
+                    <li class="icon"><a href="#" title="">Производственные помещения</a></li>
+                    <li class="graphic"><a href="#" title="">Жилые комплексы</a></li>
+                </ul>
+                <div class="clearfix">
+                </div>
+                <div class="row">
+                    <section id="projects">
+                        <ul id="thumbs" class="portfolio">
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs design" data-id="id-0" data-type="web">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="images/works/1.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb"><i class="icon-info-blocks fa fa-search"></i></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/works/1.jpg" alt="">
+                            </li>
+                            <!-- End Item Project -->
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs design" data-id="id-1" data-type="icon">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/2.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb"><i class="icon-info-blocks fa fa-search"></i></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/works/2.jpg" alt="">
+                            </li>
+                            <!-- End Item Project -->
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs photography" data-id="id-2" data-type="graphic">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/3.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb"><i class="icon-info-blocks fa fa-search"></i></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/works/3.jpg" alt="">
+                            </li>
+                            <!-- End Item Project -->
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs design" data-id="id-0" data-type="web">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/4.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb"><i class="icon-info-blocks fa fa-search"></i></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/works/4.jpg" alt="">
+                            </li>
+                            <!-- End Item Project -->
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs photography" data-id="id-4" data-type="web">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/5.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb"><i class="icon-info-blocks fa fa-search"></i></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/works/5.jpg" alt="">
+                            </li>
+                            <!-- End Item Project -->
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs photography" data-id="id-5" data-type="icon">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/6.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb"><i class="icon-info-blocks fa fa-search"></i></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/works/6.jpg" alt="">
+                            </li>
+                            <!-- End Item Project -->
+                            <li class="item-thumbs design" data-id="id-0" data-type="web">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/7.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb"><i class="icon-info-blocks fa fa-search"></i></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/works/7.jpg" alt="">
+                            </li>
+                            <!-- End Item Project -->
+                            <!-- Item Project and Filter Name -->
+                            <li class="item-thumbs design" data-id="id-0" data-type="graphic">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Portfolio name" href="img/works/8.jpg">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb"><i class="icon-info-blocks fa fa-search"></i></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="images/works/8.jpg" alt="">
+                            </li>
+                            <!-- End Item Project -->
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio -->
+<div class="portfolio portfolio-page container">
+    <div class="row">
+        <div class="portfolio-navigator span12">
+            <h4 class="filter-portfolio">
+                <a class="all" id="active-imgs" href="#">All</a> /
+                <a class="web-design" id="" href="#">Web Design</a> /
+                <a class="logo-design" id="" href="#">Logo Design</a> /
+                <a class="print-design" id="" href="#">Print Design</a>
+            </h4>
+        </div>
+    </div>
+    <div class="row">
+        <ul class="portfolio-img">
+            <li data-id="p-1" data-type="web-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work1.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work1.jpg" alt="">
+                    </a>
+                    <h4>Lorem Website</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-2" data-type="logo-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work2.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work2.jpg" alt="">
+                    </a>
+                    <h4>Ipsum Logo</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-3" data-type="print-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work3.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work3.jpg" alt="">
+                    </a>
+                    <h4>Dolor Prints</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-4" data-type="web-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work4.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work4.jpg" alt="">
+                    </a>
+                    <h4>Sit Amet Website</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-5" data-type="logo-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work5.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work5.jpg" alt="">
+                    </a>
+                    <h4>Consectetur Logo</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-6" data-type="print-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work6.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work6.jpg" alt="">
+                    </a>
+                    <h4>Adipisicing Print</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-7" data-type="web-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work7.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work7.jpg" alt="">
+                    </a>
+                    <h4>Elit Website</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-8" data-type="print-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work8.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work8.jpg" alt="">
+                    </a>
+                    <h4>Sed Do Prints</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-9" data-type="web-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work9.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work9.jpg" alt="">
+                    </a>
+                    <h4>Eiusmod Website</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-10" data-type="logo-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work10.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work10.jpg" alt="">
+                    </a>
+                    <h4>Tempor Logo</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-11" data-type="web-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work11.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work11.jpg" alt="">
+                    </a>
+                    <h4>Incididunt Website</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+            <li data-id="p-12" data-type="print-design" class="span3">
+                <div class="work">
+                    <a href="images/portfolio/work12.jpg" rel="prettyPhoto">
+                        <img src="images/portfolio/work12.jpg" alt="">
+                    </a>
+                    <h4>Ut Labore Print</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--</div>
+<!-- Конец блок "НАШИ РАБОТЫ" -->
+<!--
+<div class="container">
+    <div class="row">
+        <div class="skill-home"> <div class="skill-home-solid clearfix">
+            <div class="col-md-3 text-center">
+                <div class="box">
+                    <span class="icons c1"><i class="icon-settings icons"></i></span> <div class="box-area">
+                    <h3>Chemical</h3> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident</p> <p><a href="#">Learn More</a></p></div>
+                </div></div>
+            <div class="col-md-3 text-center">
+                <div class="box">
+                    <span class="icons c2"><i class="icon-diamond icons"></i></span> <div class="box-area">
+                    <h3>Rubber</h3> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident</p> <p><a href="#">Learn More</a></p></div>
+                </div></div>
+            <div class="col-md-3 text-center">
+                <div class="box">
+                    <span class="icons c3"><i class="icon-user icons"></i></span> <div class="box-area">
+                    <h3>Marbel</h3> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident</p> <p><a href="#">Learn More</a></p></div>
+                </div></div>
+            <div class="col-md-3 text-center">
+                <div class="box">
+                    <span class="icons c4"><i class="icon-home icons"></i></span> <div class="box-area">
+                    <h3>Chemical</h3> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident</p> <p><a href="#">Learn More</a></p></div>
+                </div></div>
+        </div></div></div>
+</div>
+
+
+</div>
+</section>-->
+<!-- Начало блок "КОНТАКТЫ" -->
+<section id="contact">
+    <div class="row">
+        <div class="col-md-8 text-center">
+            <h2>КОНТАКТЫ</h2>
+        </div>
+    </div>
+
+</section>
+<!-- Конец блок "КОНТАКТЫ" -->
+
+
+
+<script src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/number.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script>
+<!--<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>-->
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="prettyPhoto/js/jquery.prettyPhoto.js"></script>
+<script src="js/scripts.js"></script>
+
+<script>
+    $(window).scroll(function() {
+        var hT = $('.circle').offset().top,
+                hH = $('.circle').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+        console.log((hT - wH), wS);
+        if (wS > (hT + hH - wH)) {
+            $('.count').each(function() {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 9000,
+                    easing: 'swing',
+                    step: function(now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            }); {
+                $('.count').removeClass('count').addClass('counted');
+            };
+        }
+    });
+</script>
+
+<!-- start templatemo back to top js -->
+<script>
+    $(document).ready(function() {
+        // FlexSlider
+        $('.flexslider').flexslider({
+            animation: "fade",
+            directionNav: false
+        });
+
+        // Show or hide the sticky footer button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                $('.go-top').fadeIn(200);
+            } else {
+                $('.go-top').fadeOut(200);
+            }
+        });
+        // Animate the scroll to top
+        $('.go-top').click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: 0}, 300);
+        })
+    });
+</script>
+<script>
+    $(window).load(function() {
+        var $container = $('.animate-grid .gallary-thumbs');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+        $('.animate-grid .categories a').click(function() {
+            $('.animate-grid .categories .active').removeClass('active');
+            $(this).addClass('active');
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    });
+
+</script>
+<script type="text/javascript" src="http://www.designbootstrap.com/livedemos/2015/02/04/pink/assets/js/jquery.isotope.js"></script>
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+</body>
+</html>
